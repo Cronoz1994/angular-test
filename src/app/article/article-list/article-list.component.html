@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="col-md-10 col-md-offset-1">
+    <button class="btn btn-primary" (click)="redirect()">Add Story</button>
+
+    <section>
+      <h2>Articles</h2>
+
+      <at-article-list-item *ngFor="let article of articles" 
+                            [article]="article"
+                            (select)="onSelect($event)">
+      </at-article-list-item>
+    </section>
+  </div>
+</div>
